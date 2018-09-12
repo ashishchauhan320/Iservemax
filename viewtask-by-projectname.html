@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dashboard | iServe Max</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Style -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="pk-loader">
+        <svg id="triangle" viewBox="-3 -4 39 39">
+             <polygon fill="#EFEFEF" stroke="#555" stroke-width="1" points="16,0 32,32 0,32"></polygon>
+        </svg>
+        <div class="loader-text">© 2018 iServe Max.</div>
+    </div>
+    <header class="d-header">
+        <div class="container-fluid">
+            <div class="hdr-wrap">
+                <a class="logo" href="#"><img src="images/logo.png" alt="logo"></a>
+                <div class="user_view"><span class="user_icon"><img src="images/user_img.jpg"></span><span class="caret1">Field Coordinator <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                    <ul class="view_links">
+                        <li>
+                            <a href="#">settings</a>
+                        </li>
+                        <li>
+                            <a href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="dashboard-content">
+        <aside class="dashboard-nav">
+            <ul>
+                <li  class="active"><a href=""><span><svg><use xlink:href="#menu1"></use></svg></span> Checkin Checkout</a><span class="drop-down"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <ul class="submenu">
+                        <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i>view all</a></li>
+                    </ul>
+                </li>
+                <li><a href=""><span><svg><use xlink:href="#menu2"></use></svg></span> Task</a><span class="drop-down"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <ul class="submenu">
+                        <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i>create task</a></li>
+                        <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i>pending task</a></li>
+                        <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i>completed task</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span><svg><use xlink:href="#menu3"></use></svg></span> Worker <small>15</small></a></li>
+                <li><a href="#"><span><svg><use xlink:href="#menu4"></use></svg></span> Asset <small>10</small></a></li>
+                <li><a href="#"><span><svg><use xlink:href="#menu5"></use></svg></span> Projects <small>25</small></a></li>
+                <li><a href="#"><span><svg><use xlink:href="#menu6"></use></svg></span> Complaint <small>18</small></a></li>
+                <li><a href="#"><span><svg><use xlink:href="#menu7"></use></svg></span> invoice <small>8</small></a></li>
+                <li><a href="#"><span><svg><use xlink:href="#menu8"></use></svg></span> collection <small>11</small></a></li>
+                <li><a href="#"><span><svg><use xlink:href="#menu9"></use></svg></span> Safety Content</a></li>
+                <li><a href="#"><span><svg><use xlink:href="#menu10"></use></svg></span> Technical Document</a></li>
+            </ul>
+        </aside>
+        <div class="content-section">
+            <div class="cntnt-head-bar">
+                <h1>Project Name</h1>
+                <div class="srch">
+                    <input type="search" placeholder="Search...">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+            <div class="checkin-out-chart">
+                <table class="tbl-view task-view-tbl">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Asset</th>
+                            <th>Worker</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-column="Task">Lorem ipsum dolor</td>
+                            <td data-column="Asset">Bulldozer</td>
+                            <td data-column="Worker">John, Smith, Jemes</td>
+                            <td data-column="Date">20 July 2018</td>
+                            <td data-column="Status">
+                                <a href="#" class="btn">pending</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-column="Task">Lorem ipsum dolor</td>
+                            <td data-column="Asset">Bulldozer</td>
+                            <td data-column="Worker">John, Smith, Jemes</td>
+                            <td data-column="Date">20 July 2018</td>
+                            <td data-column="Status">
+                                <a href="#" class="btn cmplt-btn">completed</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-column="Task">Lorem ipsum dolor</td>
+                            <td data-column="Asset">Bulldozer</td>
+                            <td data-column="Worker">John, Smith, Jemes</td>
+                            <td data-column="Date">20 July 2018</td>
+                            <td data-column="Status">
+                                <a href="#" class="btn">pending</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-column="Task">Lorem ipsum dolor</td>
+                            <td data-column="Asset">Bulldozer</td>
+                            <td data-column="Worker">John, Smith, Jemes</td>
+                            <td data-column="Date">20 July 2018</td>
+                            <td data-column="Status">
+                                <a href="#" class="btn cmplt-btn">completed</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <img src="images/pagination.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-------------------------------------- All Modals starts here ------------------------------------------->
+    <div class="modal fade" id="c-history" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">components history</h2>
+                </div>
+                <div class="modal-body">
+                    <table class="tbl-view">
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="asset-history" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Asset history</h2>
+                </div>
+                <div class="modal-body">
+                    <table class="tbl-view">
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Duration">05 Aug - 20 Sept</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="unsigned" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Un - Signed</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <input type="submit" value="submit" class="btn-sbmit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signed" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Signed</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="chs_fle">
+                            <input name="r" class="file" type="file">
+                            <p> <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                <input class="brws_inpt form_custom_control form-control" placeholder="Upload Image" type="text"> <span class="input-group-btn"> 
+									</span> </p>
+                        </div>
+                        <input type="submit" value="submit" class="btn-sbmit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="solved" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Solved</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="chs_fle">
+                                <input name="r" class="file" type="file">
+                                <p> <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <input class="brws_inpt form_custom_control form-control" placeholder="Attach: photo, text, video, voice note" type="text"> <span class="input-group-btn"> 
+									</span> </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <input type="submit" value="submit" class="btn-sbmit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="t-list" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Task list</h2>
+                </div>
+                <div class="modal-body">
+                    <table class="tbl-view asset-tbl">
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Task</th>
+                                <th>Worker</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Task">lorem ipsum dolar</td>
+                                <td data-column="Worker">John, Smith, James</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Task">lorem ipsum dolar</td>
+                                <td data-column="Worker">John, Smith, James</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Task">lorem ipsum dolar</td>
+                                <td data-column="Worker">John, Smith, James</td>
+                            </tr>
+                            <tr>
+                                <td data-column="Project Name">Abc</td>
+                                <td data-column="Task">lorem ipsum dolar</td>
+                                <td data-column="Worker">John, Smith, James</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="add-expense" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Add expenses</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <select class="form-control">
+                            <option>Select Expense Type</option>
+                            <option>Select Expense Type1</option>
+                            <option>Select Expense Type2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control">
+                            <option>Expense Name</option>
+                            <option>Expense Name1</option>
+                            <option>Expense Name2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Price">
+                        </div>
+                        <div class="form-group">
+                            <div class="chs_fle">
+                                <input name="r" class="file" type="file">
+                                <p>
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <input class="brws_inpt form_custom_control form-control" placeholder="Select Images" type="text"> <span class="input-group-btn"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <input type="submit" value="submit" class="btn-sbmit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="components" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">components</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="comp-div">
+                        <figure><img src="images/component-img.jpg"></figure>
+                        <div class="labels-component">
+                            <p><strong>Name : </strong>Abc</p>
+                            <p><strong>Part Number : </strong>12232345</p>
+                            <p><strong>Serial No : </strong>123132579565693</p>
+                        </div>
+                        <p><strong>Description : </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse purus enim, elementum ut interdum ut, tempor ac lacus. Duis nec hendrerit felis. Ut gravida congue nisi sed egestas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------SVG Icons---------------------------------------------------------->
+    <svg style="display:none;">
+        <symbol id="menu1" x="0px" y="0px" viewBox="0 0 482 512">
+                     <g>
+                        <defs>
+                            <rect id="SVGID_1_" width="482" height="512"/>
+                        </defs>
+                        <clipPath id="SVGID_2_">
+                            <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                        </clipPath>
+                        <path clip-path="url(#SVGID_2_)" d="M185.68,276L20,275.999c-11.046,0-20-8.954-20-20s8.955-20,20-20L185.679,236l-19.598-19.597
+                            c-7.811-7.811-7.811-20.475,0-28.285s20.474-7.811,28.284,0l53.741,53.74c7.711,7.711,7.869,20.416,0,28.284l-53.74,53.74
+                            c-7.81,7.811-20.473,7.813-28.284,0.001c-7.811-7.811-7.811-20.475,0-28.284L185.68,276z M462,0H136c-11.046,0-20,8.954-20,20v76
+                            c0,11.046,8.954,20,20,20s20-8.954,20-20V40h286v432H156v-56c0-11.046-8.954-20-20-20s-20,8.954-20,20v76c0,11.046,8.954,20,20,20
+                            h326c11.046,0,20-8.954,20-20V20C482,8.954,473.046,0,462,0"/>
+                    </g>
+        </symbol>
+        <symbol id="menu2" x="0px" y="0px" viewBox="0 0 92.736 83.385">
+                <g>
+                    <defs>
+                        <rect id="SVGID_1_" width="92.736" height="83.385"/>
+                    </defs>
+                    <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                    </clipPath>
+                    <path clip-path="url(#SVGID_2_)" d="M34.492,14.185c0-0.133,0.115-0.229,0.23-0.229h27.305
+                        c0.133,0,0.23,0.116,0.23,0.229v5.412c0,0.135-0.115,0.231-0.23,0.231H34.722c-0.115,0-0.21-0.096-0.23-0.231V14.185z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M34.492,45.965c0-0.134,0.115-0.229,0.23-0.229h27.305
+                        c0.133,0,0.23,0.116,0.23,0.229v5.412c0,0.135-0.115,0.23-0.23,0.23H34.722c-0.115,0-0.21-0.116-0.23-0.23V45.965z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M13.67,82.83c-4.021,0-7.285-3.263-7.285-7.285s3.264-7.283,7.285-7.283
+                        c4.025,0,7.285,3.261,7.285,7.283S17.695,82.83,13.67,82.83"/>
+                    <path clip-path="url(#SVGID_2_)" d="M6.424,43.766c0-4,3.244-7.247,7.246-7.247c4.004,0,7.248,3.246,7.248,7.247
+                        c0,4.004-3.244,7.248-7.248,7.248C9.668,51.014,6.424,47.77,6.424,43.766"/>
+                    <polygon clip-path="url(#SVGID_2_)" points="15.391,17.093 10.191,22.273 5.01,17.054 0,12.044 5.219,6.843 
+                        10.21,11.873 22.161,0 27.342,5.218 	"/>
+                    <path clip-path="url(#SVGID_2_)" d="M62.258,83.156c0,0.133-0.115,0.229-0.23,0.229H34.723
+                        c-0.135,0-0.231-0.116-0.231-0.229v-5.41c0-0.135,0.116-0.231,0.231-0.231h27.305c0.133,0,0.23,0.097,0.23,0.231V83.156z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M92.736,73.348c0,0.133-0.115,0.229-0.23,0.229H34.722
+                        c-0.134,0-0.23-0.116-0.23-0.229v-5.412c0-0.135,0.115-0.229,0.23-0.229h57.784c0.135,0,0.23,0.095,0.23,0.229V73.348z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M92.736,41.585c0,0.135-0.115,0.23-0.23,0.23H34.722
+                        c-0.134,0-0.23-0.115-0.23-0.23v-5.41c0-0.133,0.115-0.231,0.23-0.231h57.784c0.135,0,0.23,0.098,0.23,0.231V41.585z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M92.736,9.808c0,0.133-0.115,0.229-0.23,0.229H34.722
+                        c-0.134,0-0.23-0.116-0.23-0.229V4.396c0-0.133,0.115-0.229,0.23-0.229h57.784c0.135,0,0.23,0.096,0.23,0.229V9.808z"/>
+                </g>
+        </symbol>
+        <symbol id="menu3" x="0px" y="0px" viewBox="0 0 236.191 236.191">
+                <g>
+                    <defs>
+                        <rect id="SVGID_1_" width="236.191" height="236.191"/>
+                    </defs>
+                    <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                    </clipPath>
+                    <path clip-path="url(#SVGID_2_)" d="M224.453,201.906h0.309v-22.858c0-0.49-0.043-12.185-4.117-24.356l-12.418-28.976h-20.262
+                        l-12.531,29.272c-3.961,11.875-4.004,23.565-4.004,24.06v7.621h-11.431c-6.3,0-11.429-5.129-11.429-11.431v-15.866
+                        c18.188-10.56,30.477-30.203,30.477-52.704v-0.543c6.551-1.703,11.43-7.613,11.43-14.696c0-6.847-2.578-11.171-4.023-13.058
+                        c0.129-0.707,0.215-1.426,0.215-2.18V68.57c0-37.808-30.762-68.57-68.574-68.57C80.286,0,49.522,30.762,49.522,68.57v7.621
+                        c0,0.754,0.086,1.473,0.215,2.18c-1.445,1.887-4.023,6.211-4.023,13.058c0,7.083,4.875,12.993,11.43,14.696v0.543
+                        c0,22.5,12.29,42.144,30.477,52.704v15.866c0,6.302-5.129,11.431-11.431,11.431H57.142v-5.371
+                        c7.491-4.539,11.428-11.856,11.428-21.297c0-9.275-6.254-20.072-18.207-22.767l-4.648-1.048v20.005h-7.621v-20.013l-4.656,1.056
+                        c-11.95,2.719-18.2,13.508-18.2,22.767c0,9.44,3.938,16.754,11.43,21.297v9.582C10.958,198.117,0,213.975,0,232.383v3.808h7.622
+                        v-3.808c0-19.719,15.063-35.985,34.284-37.903v41.711h7.617v-41.906h11.431v41.906h7.616v-41.906h7.621
+                        c1.556,0,3.039-0.237,4.49-0.59c3.307,17.655,18.812,31.066,37.413,31.066c18.602,0,34.109-13.415,37.418-31.066
+                        c1.449,0.353,2.934,0.59,4.487,0.59h7.622v41.906h7.617v-41.906h11.43v41.906h7.617V194.48
+                        c19.223,1.918,34.285,18.185,34.285,37.899v3.812h7.621v-3.812C236.191,220.668,231.727,210.004,224.453,201.906 M51.638,175.633
+                        l-2.115,1.053v9.982h-3.808c-3.952,0-7.77,0.553-11.429,1.504v-11.486l-2.114-1.053c-6.266-3.11-9.317-8.224-9.317-15.633
+                        c0-4.896,2.603-10.427,7.623-13.466v17.272h22.855v-17.28c5.016,3.03,7.621,8.569,7.621,13.474
+                        C60.954,167.41,57.901,172.523,51.638,175.633 M179.047,88.16c1.059-0.691,2.034-1.426,2.898-2.203
+                        c0.5,1.383,0.914,3.195,0.914,5.472c-0.004,2.809-1.548,5.239-3.813,6.559V88.16z M114.286,7.812v26.473h7.621V7.812
+                        c31.164,1.946,56.008,27.356,57.039,58.758c-13.559-7.226-42.016-9.426-60.852-9.426c-18.831,0-47.288,2.2-60.847,9.422
+                        C58.272,35.164,83.122,9.754,114.286,7.812 M57.145,97.984c-2.27-1.316-3.812-3.746-3.812-6.555c0-2.281,0.414-4.093,0.91-5.476
+                        c0.866,0.781,1.843,1.516,2.902,2.203V97.984z M57.145,76.203c0.75-3.887,22.911-11.441,60.949-11.441
+                        c38.066,0,60.234,7.562,60.953,11.429c0,7.488-22.801,15.238-60.953,15.238C79.96,91.429,57.165,83.687,57.145,76.203
+                         M64.763,106.668V91.941c16.797,6.403,42.827,7.106,53.331,7.106c10.508,0,36.539-0.703,53.336-7.106v14.727
+                        c0,29.406-23.926,53.333-53.336,53.333C88.688,160,64.763,136.074,64.763,106.668 M118.094,217.143
+                        c-15.606,0-28.495-11.803-30.254-26.948c4.47-3.487,7.398-8.862,7.398-14.957v-12.104c7.068,2.871,14.775,4.488,22.856,4.488
+                        c8.086,0,15.793-1.617,22.859-4.488v12.104c0,6.095,2.93,11.47,7.398,14.957C146.594,205.34,133.703,217.143,118.094,217.143
+                         M189.637,186.668h-10.59v-7.621c0-0.106,0.043-10.935,3.5-21.356l10.441-24.358h1.297v34.987
+                        c-4.422,1.578-7.617,5.771-7.617,10.728C186.668,181.984,187.812,184.639,189.637,186.668 M198.094,182.859
+                        c-2.098,0-3.809-1.707-3.809-3.812c0-2.103,1.711-3.81,3.809-3.81c2.102,0,3.813,1.707,3.813,3.81
+                        C201.906,181.152,200.195,182.859,198.094,182.859 M217.145,195.324c-3.941-2.84-8.32-5.104-13.055-6.59
+                        c3.246-2.015,5.434-5.591,5.434-9.687c0-4.961-3.195-9.149-7.617-10.728v-34.987h1.297l10.324,24.061
+                        c3.559,10.668,3.617,21.548,3.617,21.658V195.324z"/>
+                    <polygon clip-path="url(#SVGID_2_)" points="121.906,110.476 156.191,110.476 156.191,102.855 114.285,102.855 114.285,140.953 
+                        121.906,140.953 	"/>
+                    <rect x="68.57" y="49.523" clip-path="url(#SVGID_2_)" width="7.621" height="7.621"/>
+                    <rect x="83.809" y="45.715" clip-path="url(#SVGID_2_)" width="7.621" height="7.617"/>
+                </g>       
+        </symbol>
+        <symbol id="menu4" x="0px" y="0px" viewBox="0 0 512.001 512.002">
+                <g>
+                    <defs>
+                        <rect id="SVGID_1_" width="512.001" height="512.002"/>
+                    </defs>
+                    <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                    </clipPath>
+                    <path clip-path="url(#SVGID_2_)" d="M94.778,475.004c-3.196-4.504-9.439-5.563-13.943-2.366c-4.503,3.197-5.563,9.439-2.365,13.943
+                        l15.055,21.207c1.95,2.747,5.032,4.212,8.163,4.212c2.002,0,4.023-0.601,5.78-1.847c4.503-3.197,5.563-9.439,2.365-13.943
+                        L94.778,475.004z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M208.821,421.858c-7.967-37.973-30.087-70.807-62.283-92.455l-34.981-23.523
+                        c-14.027-9.429-32.881-7.401-44.605,4.554V189.938c0-15.816-10.783-29.254-26.223-32.682c-9.965-2.213-20.243,0.185-28.204,6.572
+                        C4.565,170.214,0,179.732,0,189.938V344.99c0,20.313,6.216,39.805,17.975,56.371l17.833,25.121c1.95,2.746,5.032,4.212,8.163,4.212
+                        c2.002,0,4.023-0.601,5.78-1.848c4.503-3.196,5.563-9.438,2.365-13.942l-17.833-25.121C24.939,376.62,20,361.13,20,344.989V189.938
+                        c0-4.108,1.838-7.939,5.042-10.512c3.203-2.57,7.34-3.535,11.354-2.644c6.215,1.379,10.556,6.788,10.556,13.156v123.016
+                        c0,17.414,6.398,34.005,18.021,46.913c0.498,0.596,1.01,1.188,1.551,1.761c6.641,7.037,14.449,15.329,21.803,23.146l10.295,10.957
+                        c0.033,0.034,0.069,0.064,0.103,0.099c8.807,9.367,15.302,16.284,15.438,16.428c3.779,4.025,10.109,4.226,14.135,0.444
+                        c4.026-3.781,4.225-10.109,0.443-14.135c-0.182-0.194-11.888-12.659-25.256-26.868l-22.929-24.403
+                        c-0.058-0.062-0.111-0.127-0.169-0.188c-5.376-6.431-5.309-15.754,0.326-22.115c4.985-5.626,13.449-6.706,19.686-2.514L135.378,346
+                        c27.848,18.725,46.979,47.123,53.869,79.965l16.385,78.089c0.989,4.713,5.146,7.948,9.777,7.948c0.68,0,1.371-0.07,2.063-0.215
+                        c5.405-1.134,8.867-6.437,7.733-11.841L208.821,421.858z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M74.024,445.768c-3.21-4.495-9.454-5.54-13.949-2.332c-4.495,3.208-5.539,9.453-2.332,13.948
+                        l0.064,0.09c1.952,2.735,5.027,4.193,8.149,4.193c2.01,0,4.039-0.604,5.8-1.861c4.495-3.208,5.539-9.453,2.332-13.947
+                        L74.024,445.768z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M499.474,163.829c-7.96-6.387-18.242-8.781-28.202-6.571
+                        c-15.44,3.426-26.225,16.865-26.225,32.681v120.495c-11.723-11.953-30.579-13.981-44.604-4.552l-34.981,23.521
+                        c-32.197,21.647-54.315,54.482-62.283,92.455l-16.384,78.089c-1.134,5.403,2.327,10.706,7.733,11.84
+                        c0.691,0.145,1.384,0.215,2.063,0.215c4.632,0,8.788-3.236,9.777-7.949l16.384-78.089c6.891-32.841,26.021-61.24,53.868-79.964
+                        l34.981-23.521c6.235-4.193,14.699-3.113,19.686,2.513c5.629,6.354,5.704,15.662,0.348,22.092c-0.063,0.07-0.125,0.142-0.188,0.212
+                        c0,0-48.005,51.079-48.187,51.271c-3.78,4.025-3.582,10.354,0.443,14.135c4.026,3.781,10.354,3.582,14.135-0.444
+                        c0.136-0.144,40.998-43.591,47.639-50.628c0.541-0.573,1.054-1.164,1.552-1.761c11.622-12.908,18.021-29.499,18.021-46.913V189.938
+                        c0-6.367,4.341-11.777,10.558-13.156c4.013-0.89,8.148,0.075,11.354,2.645c3.203,2.571,5.042,6.402,5.042,10.511V344.99
+                        c0,16.142-4.938,31.631-14.283,44.794l-75.551,106.427c-3.197,4.503-2.138,10.746,2.365,13.943c1.758,1.247,3.778,1.847,5.78,1.847
+                        c3.13,0,6.213-1.466,8.162-4.212l75.552-106.427c11.759-16.565,17.975-36.059,17.975-56.371V189.938
+                        C511.999,179.732,507.434,170.216,499.474,163.829"/>
+                    <path clip-path="url(#SVGID_2_)" d="M352.776,315.667c5.521,0,10-4.477,10-10v-35.929c0-1.239-0.05-2.468-0.122-3.69h46.082
+                        c5.521,0,10-4.477,10-10v-18.676c0-21.84-14.836-40.638-36.079-45.712l-17.791-4.25v-3.19c11.563-8.1,19.145-21.513,19.145-36.671
+                        V124.42c0-24.679-20.077-44.756-44.756-44.756c-11.075,0-21.215,4.052-29.038,10.74C301.507,69.074,280.549,54,256.126,54
+                        c-24.454,0-45.434,15.113-54.124,36.484c-7.835-6.736-18.012-10.822-29.132-10.822c-24.679,0-44.756,20.077-44.756,44.756v1.537
+                        v21.592c0,15.158,7.582,28.571,19.145,36.671v3.19l-17.791,4.25c-21.242,5.075-36.078,23.872-36.078,45.712v18.676
+                        c0,5.523,4.478,10,10,10h45.952c-0.071,1.213-0.12,2.433-0.12,3.661v35.958c0,5.523,4.478,10,10,10h60.11c5.522,0,10-4.477,10-10
+                        s-4.478-10-10-10h-10.333V275c0-5.523-4.478-10-10-10s-10,4.477-10,10v20.667h-19.777v-25.958c0-19.287,13.1-35.896,31.854-40.39
+                        l27.442-6.576l18.365,41.782c1.596,3.631,5.188,5.976,9.153,5.976h0.001c3.966,0,7.558-2.344,9.154-5.975l18.346-41.72
+                        l27.355,6.535c18.771,4.485,31.883,21.096,31.883,40.397v25.929h-19.777V275c0-5.523-4.479-10-10-10s-10,4.477-10,10v20.667
+                        h-11.333c-5.522,0-10,4.477-10,10s4.478,10,10,10H352.776z M224.311,194.345c-2.569-1.133-5.247-2.039-8.007-2.7l-17.864-4.281
+                        v-3.116c3.224-2.253,6.139-4.916,8.667-7.918c4.466,6.88,10.334,12.763,17.204,17.244V194.345z M148.114,147.547v-4.763h13.957
+                        c12.243,0,24.323-2.427,35.555-7.081v11.843c0,13.65-11.105,24.756-24.756,24.756S148.114,161.198,148.114,147.547
+                         M217.716,144.625v-10.562h13.669c15.858,0,30.937-5.897,42.492-16.415l20.622,12.116v16.324
+                        c-0.773,20.503-17.684,36.947-38.373,36.947C234.946,183.036,217.716,165.805,217.716,144.625 M287.743,194.377V193.7
+                        c6.926-4.478,12.846-10.376,17.347-17.286c2.511,2.968,5.401,5.602,8.594,7.834v3.116l-17.864,4.281
+                        C293.034,192.313,290.333,193.23,287.743,194.377 M314.499,147.547v-1.46c0.012-0.487,0.037-0.972,0.037-1.462v-8.906
+                        c11.221,4.644,23.288,7.066,35.518,7.066h13.957v4.763c0,13.65-11.104,24.756-24.756,24.756S314.499,161.198,314.499,147.547
+                         M339.255,99.662c13.103,0,23.858,10.231,24.702,23.123h-13.903c-11.688,0-23.189-2.814-33.528-8.172
+                        C320.329,105.825,329.086,99.662,339.255,99.662 M217.716,112.41c0-21.179,17.23-38.41,38.41-38.41
+                        c19.103,0,34.992,14.018,37.926,32.306l-16.835-9.891c-4.211-2.474-9.593-1.545-12.729,2.2
+                        c-8.228,9.818-20.292,15.449-33.103,15.449h-13.669V112.41z M172.87,99.662c10.169,0,18.926,6.164,22.73,14.95
+                        c-10.34,5.358-21.841,8.172-33.529,8.172h-13.903C149.012,109.893,159.769,99.662,172.87,99.662 M196.416,209.869
+                        c-19.674,4.714-35.136,18.431-42.495,36.178h-40.532v-8.676c0-12.546,8.522-23.345,20.725-26.26l25.468-6.084
+                        c4.501-1.075,7.677-5.098,7.677-9.726v-3.362c1.84,0.231,3.71,0.364,5.611,0.364c1.887,0,3.744-0.131,5.57-0.359v2.853
+                        c-0.007,0.149-0.01,0.298-0.011,0.447c-0.002,3.281,1.611,6.495,4.573,8.411c1.116,0.723,2.322,1.193,3.553,1.428l14.917,3.574
+                        L196.416,209.869z M256.04,235.653l-11.729-26.683v-7.136c3.817,0.787,7.768,1.202,11.814,1.202c3.977,0,7.861-0.403,11.617-1.164
+                        v7.166L256.04,235.653z M315.54,209.888l-5.021-1.199l14.997-3.594c1.248-0.232,2.475-0.708,3.605-1.44
+                        c2.957-1.913,4.564-5.127,4.564-8.408c0-0.078,0-0.157-0.003-0.235v-3.068c1.827,0.228,3.684,0.359,5.57,0.359
+                        c1.901,0,3.771-0.133,5.611-0.364v3.362c0,4.628,3.176,8.651,7.677,9.726l25.468,6.084c12.203,2.916,20.727,13.714,20.727,26.26
+                        v8.676h-40.67C350.699,228.3,335.226,214.591,315.54,209.888"/>
+                    <path clip-path="url(#SVGID_2_)" d="M255.999,295.67c-2.641,0-5.21,1.061-7.07,2.92c-1.87,1.87-2.93,4.44-2.93,7.08
+                        c0,2.63,1.06,5.2,2.93,7.07c1.86,1.859,4.43,2.93,7.07,2.93c2.63,0,5.2-1.07,7.069-2.93c1.859-1.87,2.931-4.44,2.931-7.07
+                        c0-2.64-1.07-5.21-2.931-7.08C261.199,296.73,258.629,295.67,255.999,295.67"/>
+                    <path clip-path="url(#SVGID_2_)" d="M255.993,34.963c5.521,0,10-4.477,10-10V10c0-5.523-4.479-10-10-10c-5.522,0-10,4.477-10,10
+                        v14.963C245.993,30.486,250.471,34.963,255.993,34.963"/>
+                    <path clip-path="url(#SVGID_2_)" d="M205.022,46.767c1.952,1.951,4.51,2.926,7.067,2.926c2.561,0,5.121-0.978,7.074-2.932
+                        c3.903-3.907,3.9-10.239-0.007-14.142l-10.49-10.48c-3.907-3.904-10.238-3.901-14.142,0.006c-3.904,3.907-3.9,10.239,0.007,14.142
+                        L205.022,46.767z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M299.745,49.889c2.561,0,5.122-0.978,7.074-2.933l10.409-10.419
+                        c3.902-3.907,3.899-10.239-0.008-14.142c-3.906-3.903-10.239-3.901-14.142,0.007L292.67,32.821
+                        c-3.904,3.907-3.899,10.239,0.007,14.142C294.63,48.914,297.188,49.889,299.745,49.889"/>
+                </g>    
+        </symbol>
+        <symbol id="menu5" x="0px" y="0px" viewBox="0 0 480.001 480">
+                <g>
+                    <defs>
+                        <rect id="SVGID_1_" width="480.001" height="480"/>
+                    </defs>
+                    <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                    </clipPath>
+                    <path clip-path="url(#SVGID_2_)" d="M472,0H112c-4.418,0-8,3.582-8,8v120h16V16h344v440c0.077,4.207-3.169,7.731-7.368,8
+                        c-0.688,0-1.376-0.056-2.063-0.072c-1.416-0.04-2.832-0.071-4.225-0.216c-0.12,0-0.231,0-0.352-0.048
+                        c-26.128-2.856-46.767-23.476-49.648-49.6c0-0.112-0.04-0.232-0.056-0.345c-0.193-1.9-0.29-3.81-0.288-5.72v-16
+                        c0-4.418-3.582-8-8-8H120V240h-16v144H40c-4.418,0-8,3.582-8,8v16c0.044,39.746,32.254,71.956,72,72h352.8
+                        c12.982-0.34,23.301-11.014,23.2-24V8C480,3.582,476.418,0,472,0 M104,464c-30.913-0.035-55.965-25.087-56-56v-8h336v8
+                        c0.011,2.639,0.163,5.274,0.456,7.896c0.072,0.695,0.208,1.367,0.304,2.056c0.265,1.936,0.584,3.864,1.008,5.76
+                        c0.145,0.664,0.328,1.32,0.496,1.984c0.488,1.928,1.04,3.823,1.681,5.695c0.184,0.536,0.376,1.064,0.575,1.601
+                        c0.729,1.983,1.553,3.92,2.456,5.832c0.192,0.392,0.368,0.8,0.561,1.16c1.003,2.026,2.104,3.997,3.304,5.912
+                        c0.16,0.256,0.304,0.52,0.464,0.8c1.305,2.043,2.712,4.019,4.216,5.92l0.257,0.344c1.745,2.193,3.615,4.284,5.6,6.264
+                        c1.723,1.707,3.51,3.307,5.36,4.801L104,464z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M264,224c2.121,0,4.156-0.844,5.656-2.344l32-32c3.123-3.124,3.123-8.188,0-11.312l-32-32
+                        c-1.5-1.5-3.535-2.344-5.656-2.344H40c-22.091,0-40,17.909-40,40s17.909,40,40,40H264z M241.76,176H80v16h161.76l4,16H64v-48
+                        h181.76L241.76,176z M284.688,184l-22.752,22.752L256.248,184l5.688-22.752L284.688,184z M16,184c0-13.255,10.745-24,24-24h8v48h-8
+                        C26.745,208,16,197.255,16,184"/>
+                    <path clip-path="url(#SVGID_2_)" d="M184,344h240c4.418,0,8-3.582,8-8V96c-0.001-4.418-3.583-7.999-8.002-7.999
+                        c-2.12,0.001-4.154,0.844-5.654,2.343l-240,240c-3.124,3.125-3.123,8.19,0.002,11.314C179.846,343.157,181.879,344,184,344
+                         M416,115.312V136h-16v16h16v16h-16v16h16v16h-16v16h16v16h-16v16h16v16h-16v16h16v16h-16v16h16v16h-16v-16h-16v16h-16v-16h-16v16
+                        h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-20.688L416,115.312z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M299.88,296H376c4.418,0,8-3.582,8-8v-76.12c-0.001-4.418-3.583-7.999-8.002-7.998
+                        c-2.12,0-4.154,0.842-5.654,2.342l-76.12,76.12c-3.123,3.125-3.123,8.19,0.002,11.314C295.726,295.157,297.76,296,299.88,296
+                         M368,231.2V280h-48.8L368,231.2z"/>
+                    <rect x="208" y="48" clip-path="url(#SVGID_2_)" width="160" height="16"/>
+                    <rect x="184" y="80" clip-path="url(#SVGID_2_)" width="208" height="16"/>
+                    <rect x="136" y="248" clip-path="url(#SVGID_2_)" width="48" height="16"/>
+                    <rect x="136" y="280" clip-path="url(#SVGID_2_)" width="32" height="16"/>
+                </g>   
+        </symbol>
+        <symbol id="menu6" x="0px" y="0px" viewBox="0 0 512 512">
+                    <g>
+                        <defs>
+                            <rect id="SVGID_1_" width="512" height="512"/>
+                        </defs>
+                        <clipPath id="SVGID_2_">
+                            <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                        </clipPath>
+                        <path clip-path="url(#SVGID_2_)" d="M462,44h-47.667V30c0-16.542-13.458-30-30-30s-30,13.458-30,30v14h-168V30
+                            c0-16.542-13.458-30-30-30s-30,13.458-30,30v14.37c-0.85-0.235-1.741-0.37-2.666-0.37H83.823c-27.57,0-50,22.43-50,50v170.333
+                            c0,5.523,4.478,10,10,10c5.522,0,10-4.477,10-10V147h360.51c5.522,0,10-4.477,10-10s-4.478-10-10-10H53.823V94
+                            c0-16.542,13.458-30,30-30h39.844c0.925,0,1.816-0.136,2.666-0.37V76.5c0,16.542,13.458,30,30,30s30-13.458,30-30V64h168v12.5
+                            c0,16.542,13.458,30,30,30s30-13.458,30-30V64H462c16.542,0,30,13.458,30,30v379.994c0,9.928-8.077,18.006-18.006,18.006
+                            s-18.006-8.078-18.006-18.006v-25.869c0-5.523-4.479-10-10-10H329.667c-5.522,0-10,4.477-10,10s4.478,10,10,10h106.321v15.869
+                            c0,6.511,1.647,12.643,4.545,18.006H38c-9.925,0-18-8.075-18-18v-15.875h223.825c5.522,0,10-4.477,10-10s-4.478-10-10-10h-99.916
+                            c17.474-15.049,28.57-37.309,28.57-62.125c0-45.215-36.785-82-82-82s-82,36.785-82,82c0,24.816,11.096,47.076,28.57,62.125H10
+                            c-5.522,0-10,4.477-10,10V474c0,20.953,17.047,38,38,38h435.994C494.95,512,512,494.951,512,473.994V94C512,66.43,489.57,44,462,44
+                             M166.333,76.5c0,5.514-4.486,10-10,10s-10-4.486-10-10V30c0-5.514,4.486-10,10-10s10,4.486,10,10V76.5z M394.333,76.5
+                            c0,5.514-4.486,10-10,10s-10-4.486-10-10V30c0-5.514,4.486-10,10-10s10,4.486,10,10V76.5z M28.479,376c0-34.188,27.813-62,62-62
+                            s62,27.813,62,62c0,34.188-27.813,62-62,62S28.479,410.188,28.479,376"/>
+                        <path clip-path="url(#SVGID_2_)" d="M461.24,147c2.63,0,5.21-1.07,7.068-2.93c1.86-1.86,2.932-4.44,2.932-7.07
+                            s-1.07-5.21-2.932-7.07c-1.858-1.86-4.438-2.93-7.068-2.93c-2.631,0-5.21,1.07-7.07,2.93c-1.86,1.86-2.93,4.44-2.93,7.07
+                            s1.068,5.21,2.93,7.07C456.031,145.93,458.609,147,461.24,147"/>
+                        <path clip-path="url(#SVGID_2_)" d="M284.51,441.05c-1.859,1.87-2.93,4.44-2.93,7.07c0,2.64,1.069,5.21,2.93,7.08
+                            c1.86,1.859,4.44,2.92,7.07,2.92s5.21-1.061,7.069-2.92c1.859-1.87,2.931-4.45,2.931-7.08s-1.07-5.2-2.931-7.07
+                            c-1.859-1.859-4.439-2.92-7.069-2.92S286.37,439.19,284.51,441.05"/>
+                        <path clip-path="url(#SVGID_2_)" d="M226.245,380c20.953,0,38-17.047,38-38s-17.047-38-38-38s-38,17.047-38,38
+                            S205.292,380,226.245,380 M226.245,324c9.925,0,18,8.075,18,18s-8.075,18-18,18s-18-8.075-18-18S216.32,324,226.245,324"/>
+                        <path clip-path="url(#SVGID_2_)" d="M319.578,380c20.953,0,38-17.047,38-38s-17.047-38-38-38s-38,17.047-38,38
+                            S298.625,380,319.578,380 M319.578,324c9.925,0,18,8.075,18,18s-8.075,18-18,18s-18-8.075-18-18S309.653,324,319.578,324"/>
+                        <path clip-path="url(#SVGID_2_)" d="M412.912,380c20.953,0,38-17.047,38-38s-17.047-38-38-38s-38,17.047-38,38
+                            S391.959,380,412.912,380 M412.912,324c9.925,0,18,8.075,18,18s-8.075,18-18,18s-18-8.075-18-18S402.987,324,412.912,324"/>
+                        <path clip-path="url(#SVGID_2_)" d="M170.912,238c0-20.953-17.047-38-38-38s-38,17.047-38,38s17.047,38,38,38
+                            S170.912,258.953,170.912,238 M114.912,238c0-9.925,8.075-18,18-18s18,8.075,18,18s-8.075,18-18,18S114.912,247.925,114.912,238"/>
+                        <path clip-path="url(#SVGID_2_)" d="M319.578,276c20.953,0,38-17.047,38-38s-17.047-38-38-38s-38,17.047-38,38
+                            S298.625,276,319.578,276 M319.578,220c9.925,0,18,8.075,18,18s-8.075,18-18,18s-18-8.075-18-18S309.653,220,319.578,220"/>
+                        <path clip-path="url(#SVGID_2_)" d="M412.912,276c20.953,0,38-17.047,38-38s-17.047-38-38-38s-38,17.047-38,38
+                            S391.959,276,412.912,276 M412.912,220c9.925,0,18,8.075,18,18s-8.075,18-18,18s-18-8.075-18-18S402.987,220,412.912,220"/>
+                        <path clip-path="url(#SVGID_2_)" d="M226.245,276c20.953,0,38-17.047,38-38s-17.047-38-38-38s-38,17.047-38,38
+                            S205.292,276,226.245,276 M226.245,220c9.925,0,18,8.075,18,18s-8.075,18-18,18s-18-8.075-18-18S216.32,220,226.245,220"/>
+                        <path clip-path="url(#SVGID_2_)" d="M72.324,405.409c1.876,1.875,4.419,2.929,7.071,2.929c2.652,0,5.195-1.054,7.071-2.929
+                            l39.638-39.638c3.905-3.905,3.905-10.237,0-14.143c-3.906-3.905-10.236-3.905-14.143,0l-32.566,32.567l-11.129-11.129
+                            c-3.906-3.905-10.236-3.905-14.143,0c-3.905,3.905-3.905,10.237,0,14.143L72.324,405.409z"/>
+                    </g>  
+        </symbol>
+        <symbol id="menu7" x="0px" y="0px" viewBox="0 0 12.801 9.602">
+                <g>
+                    <defs>
+                        <rect id="SVGID_1_" width="12.801" height="9.602"/>
+                    </defs>
+                    <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                    </clipPath>
+                    <path clip-path="url(#SVGID_2_)"  d="M3.52,6.559c-0.481,0.082-1.122-0.238-1.36-0.32L1.762,6.96
+                        c0,0,0.718,0.321,1.359,0.399V8h0.801V7.282c0.719-0.243,1.117-0.883,1.199-1.442c0-0.64-0.48-1.121-1.519-1.52
+                        C3.281,4.161,2.719,3.922,2.719,3.602c0-0.402,0.32-0.641,0.801-0.641C4.078,2.96,4.641,3.2,4.641,3.2l0.32-0.72
+                        c0,0-0.402-0.16-0.961-0.319V1.602H3.199v0.559C2.48,2.32,2,2.801,1.922,3.52c0,0.96,1.039,1.359,1.437,1.519
+                        C3.84,5.2,4.398,5.52,4.398,5.761C4.398,6.079,4.078,6.481,3.52,6.559"/>
+                    <path clip-path="url(#SVGID_2_)" d="M0,9.602h12.801V0H0V9.602z M12,8.801H0.801v-8H12V8.801z"/>
+                    <rect x="6.398" y="2.398" clip-path="url(#SVGID_2_)" fill="#66686A" width="4.801" height="0.801"/>
+                    <rect x="6.398" y="4" clip-path="url(#SVGID_2_)" fill="#66686A" width="4.801" height="0.801"/>
+                    <rect x="6.398" y="5.602" clip-path="url(#SVGID_2_)" fill="#66686A" width="2.401" height="0.798"/>
+                </g>        
+        </symbol>
+        <symbol id="menu8" x="0px" y="0px" viewBox="0 0 48 48">
+                <g>
+                    <defs>
+                        <rect id="SVGID_1_" width="48" height="48"/>
+                    </defs>
+                    <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                    </clipPath>
+                    <path clip-path="url(#SVGID_2_)" d="M45.992,21.603h-2.793v-5.016c0-1.207-0.98-2.188-2.184-2.188H40V0H8v1.602H5.602v1.597H3.199
+                        V8.8H2.188C0.98,8.8,0,9.781,0,10.983v34.95h0.004C0,46.387,0.141,46.828,0.422,47.195C0.812,47.707,1.406,48,2.051,48h35.809
+                        c0.926,0,1.738-0.625,1.961-1.449L48,24.121v-0.144C48,22.603,47.156,21.603,45.992,21.603 M41.016,16
+                        c0.32,0,0.586,0.262,0.586,0.586v5.016H40V16H41.016z M38.398,1.603v20H10.184c-0.184,0-0.364,0.03-0.539,0.078
+                        c-0.012,0.004-0.032,0-0.043,0.004V1.603H38.398z M8,3.199v20.469l-0.051,0.137l-0.75,2.054V3.199H8z M4.801,4.8h0.801v25.446
+                        l-0.801,2.195V4.8z M1.602,10.983c0-0.319,0.261-0.585,0.586-0.585h1.011v26.354l-1.597,4.364V10.983z M38.293,46.066
+                        c-0.051,0.195-0.231,0.332-0.434,0.332H2.051c-0.192,0-0.309-0.109-0.356-0.176c-0.05-0.066-0.129-0.203-0.101-0.328l1.605-4.398
+                        l2.403-6.578L8,28.336v0.004l1.547-4.242l0.055-0.148l0.125-0.351l0.023-0.063c0.051-0.199,0.23-0.336,0.434-0.336h35.808
+                        c0.305,0,0.383,0.438,0.402,0.656L38.293,46.066z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M14.398,13.602h19.204c0.441,0,0.796-0.36,0.796-0.801c0-0.442-0.354-0.801-0.796-0.801H14.398
+                        c-0.441,0-0.796,0.359-0.796,0.801C13.602,13.242,13.957,13.602,14.398,13.602"/>
+                    <path clip-path="url(#SVGID_2_)" d="M14.398,8h8c0.442,0,0.801-0.359,0.801-0.801c0-0.441-0.359-0.801-0.801-0.801h-8
+                        c-0.441,0-0.796,0.36-0.796,0.801C13.602,7.641,13.957,8,14.398,8"/>
+                    <path clip-path="url(#SVGID_2_)" d="M14.398,19.199h19.204c0.441,0,0.796-0.355,0.796-0.801c0-0.441-0.354-0.796-0.796-0.796
+                        H14.398c-0.441,0-0.796,0.355-0.796,0.796C13.602,18.844,13.957,19.199,14.398,19.199"/>
+                </g>     
+        </symbol>
+        <symbol id="menu9" x="0px" y="0px" viewBox="0 0 466.415 512">
+                <g>
+                    <defs>
+                        <rect id="SVGID_1_" width="466.415" height="512"/>
+                    </defs>
+                    <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                    </clipPath>
+                    <path clip-path="url(#SVGID_2_)" d="M451.387,81.454c-36.628,0-66.426-29.799-66.426-66.425V0H81.454v15.029
+                        c0,36.627-29.799,66.425-66.426,66.425H0v99.938c0,71.815,21.634,140.966,62.564,199.976
+                        c40.929,59.01,98.116,103.501,165.379,128.663l5.265,1.97l5.265-1.97c67.263-25.162,124.45-69.653,165.379-128.663
+                        c40.93-59.01,62.563-128.161,62.563-199.976V81.454H451.387z M436.358,181.392c0,65.664-19.78,128.89-57.205,182.845
+                        c-36.35,52.408-86.728,92.293-145.946,115.62c-59.219-23.327-109.598-63.212-145.948-115.62
+                        c-37.422-53.954-57.202-117.181-57.202-182.845v-71.05c41.19-6.47,73.815-39.096,80.285-80.285h245.732
+                        c6.47,41.189,39.095,73.815,80.285,80.285L436.358,181.392L436.358,181.392z"/>
+                    <path clip-path="url(#SVGID_2_)" d="M200.789,240.666l-34.641-34.641l-63.758,63.759l98.399,98.398l163.234-163.236l-63.758-63.76
+                        L200.789,240.666z M200.789,325.678l-55.894-55.893l21.253-21.253l34.641,34.641l99.477-99.478l21.253,21.253L200.789,325.678z"/>
+                </g>    
+        </symbol>
+        <symbol id="menu10" x="0px" y="0px" viewBox="0 0 38.398 48">
+                <g>
+                    <defs>
+                        <rect id="SVGID_1_" width="38.398" height="48"/>
+                    </defs>
+                    <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                    </clipPath>
+                    <path clip-path="url(#SVGID_2_)" d="M31.199,20h-20c-0.441,0-0.801,0.359-0.801,0.802c0,0.44,0.36,0.801,0.801,0.801h20
+                        c0.441,0,0.801-0.361,0.801-0.801C32,20.358,31.641,20,31.199,20"/>
+                    <path clip-path="url(#SVGID_2_)" d="M11.199,15.199h8c0.441,0,0.801-0.354,0.801-0.801c0-0.441-0.359-0.796-0.801-0.796h-8
+                        c-0.441,0-0.801,0.355-0.801,0.796C10.398,14.845,10.758,15.199,11.199,15.199"/>
+                    <path clip-path="url(#SVGID_2_)" d="M31.199,26.398h-20c-0.441,0-0.801,0.359-0.801,0.801S10.758,28,11.199,28h20
+                        C31.641,28,32,27.641,32,27.199S31.641,26.398,31.199,26.398"/>
+                    <path clip-path="url(#SVGID_2_)" d="M31.199,32.802h-20c-0.441,0-0.801,0.354-0.801,0.801c0,0.439,0.36,0.796,0.801,0.796h20
+                        c0.441,0,0.801-0.356,0.801-0.796C32,33.155,31.641,32.802,31.199,32.802"/>
+                    <path clip-path="url(#SVGID_2_)" d="M31.199,39.199h-20c-0.441,0-0.801,0.359-0.801,0.801c0,0.44,0.36,0.802,0.801,0.802h20
+                        C31.641,40.802,32,40.44,32,40C32,39.559,31.641,39.199,31.199,39.199"/>
+                    <path clip-path="url(#SVGID_2_)" d="M34.397,11.668V0H0v44h4v4h34.397V15.668L34.397,11.668z M27.199,6.73l8.469,8.469h-8.469V6.73
+                        z M1.602,42.398V1.602h31.199v8.468L26.729,4H4v38.398H1.602z M5.602,46.398V5.602h20v11.199h11.199v29.598H5.602z"/>
+                </g>   
+        </symbol>
+    </svg>
+</body>
+
+</html>
